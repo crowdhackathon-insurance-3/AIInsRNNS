@@ -213,6 +213,7 @@ namespace Clustering
                 for (int k = 1; k < collectedPoints.Count; k++) {
                     thisReg = normalizeProperty(k);
                     h[n][k] = Math.Tanh(correlations[k - 1] * h[n][k - 1] + propertyGains[k] * thisReg[n]);
+                    Console.WriteLine(h[n][k]);
                 }
             }
         }
@@ -243,6 +244,20 @@ namespace Clustering
                 MyList<Double>.NormalizeListValues(o[n], MyList<Double>.FindBoundaries(o[n]));
                 for (int j = 0; j <= categories; j++) Console.WriteLine("Insurance Program: " + j + " selected with probability: " + o[n][j]);
             }
+        }
+
+        /**
+         * Classification scores
+         */
+        public IList<Vec2<String, Double>> Classify() {
+            IList<Vec2<String, Double>> classified = new MyList<Vec2<String, Double>>();
+            for (int n = 0; n < dataset.Count; n++) {
+                TrainSample t = dataset[n];
+                for (int k = 1; k < collectedPoints.Count; k++)  {
+                    classified.Add(new Vec2<String, Double>(t.getID(), Math.Abs(10*h[n][k])));
+                }
+            }
+            return classified;
         }
 
         /**

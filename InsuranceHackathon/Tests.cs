@@ -41,12 +41,32 @@ namespace Clustering {
             metrics.GetPropertyGains();
             metrics.RNN_Compute_h();
             metrics.RNN_Compute_o();
+            IList<Vec2<String, Double>>  classify = metrics.Classify();
             int sosdl = 2;
+            Program example = new Program(classify);
+            IList<IList<Vec2<String, Double>>> clusters = example.clustering2(6);
+            int i = 0;
+            //clusters initialization and sorting
+            example.InitializeCategories(clusters);
+            i = 0;
+            int j = 0;
+            int k = 0;
+            example.initializeCategories();
+            foreach (Vec2<IList<Vec2<String, Double>>, Double> vector in example.GetSortedClusters2()) {
+                // Console.WriteLine("Cluster " + (i++));
+                Console.WriteLine(example.GetCategories()[i++]);
+                foreach (Vec2<String, Double> d in vector.getTValue()) {
+                    Console.Write("ID: " +  d.getTValue());
+                    Console.WriteLine(d.getYValue());
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey();
         }
 
         // Main Method
         static void Main(string[] args) {
-            Perform1();
+           Perform1();
             Perform2();
         }
     } //end Tests
