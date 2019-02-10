@@ -1,0 +1,7 @@
+C:\Users\George\Documents\Visual Studio 2017\Projects\InsuranceHackathon\obj\Debug\InsuranceHackathon.csprojResolveAssemblyReference.cache
+C:\Users\George\Documents\Visual Studio 2017\Projects\InsuranceHackathon\obj\Debug\InsuranceHackathon.csproj.CoreCompileInputs.cache
+C:\Users\George\Documents\Visual Studio 2017\Projects\InsuranceHackathon\bin\Debug\InsuranceHackathon.exe.config
+C:\Users\George\Documents\Visual Studio 2017\Projects\InsuranceHackathon\bin\Debug\InsuranceHackathon.exe
+C:\Users\George\Documents\Visual Studio 2017\Projects\InsuranceHackathon\bin\Debug\InsuranceHackathon.pdb
+C:\Users\George\Documents\Visual Studio 2017\Projects\InsuranceHackathon\obj\Debug\InsuranceHackathon.exe
+C:\Users\George\Documents\Visual Studio 2017\Projects\InsuranceHackathon\obj\Debug\InsuranceHackathon.pdb

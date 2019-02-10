@@ -1,0 +1,10 @@
+Bolzano
+Mahalnobis
+Pascal
+DaVinci
+Fibonacci
+Fourier
+Newton
+Laplace
+Jenks
+Fermat
